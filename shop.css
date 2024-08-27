@@ -1,0 +1,1002 @@
+* {
+    padding: 0;
+    margin: 0;
+    caret-color: transparent;
+    font-family: 'Tajawal', 'Roboto', Arial, sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@font-face {
+    font-family: 'Tajawal';
+    src: url("./Font/TAJAWAL-REGULAR.TTF") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    font-family: 'Tajawal', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(#000000, #521212, #000000) fixed;
+    background-size: cover;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px) !important;
+    animation: slideDown 0.7s ease-in-out;
+
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+}
+
+.navbar-toggler-icon {
+    color:rgb(255, 49, 49);
+
+}
+
+.navbar a {
+
+    border-radius: 8px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-nav {
+    top: 0;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    gap: 1rem;
+    margin: 0 auto;       
+    table-layout: fixed;
+    transform: translateX(-10%);
+}
+.navbar .nav-link{
+    padding: 10px;
+}
+.navbar .nav-link:hover {
+   
+    padding: auto;
+    text-shadow: 0 0 3px rgb(255, 0, 0);
+    background-color: rgba(80, 80, 80, 0.4);
+    color:rgb(255, 49, 49);
+}
+
+.navbar .nav-link.active {
+    text-shadow: 0 0 3px rgb(255, 0, 0);
+    background-color: rgba(80, 80, 80, 0.4);
+    color:rgb(255, 49, 49);
+}
+
+.store-name a {
+    display: flex;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+
+}
+
+.store-name a:hover {
+    color: red;
+    text-shadow: 0 0 13px rgb(255, 0, 0);
+
+
+}
+
+.store-name {
+    display: flex;
+    justify-content: space-around;
+}
+
+.store-name p {
+    display: flex;
+    padding-left: 10px;
+    line-height: 0px;
+    padding-bottom: 20px;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 23px;
+    text-transform: uppercase;
+    text-shadow: 0 0 13px red;
+}
+
+
+
+
+
+.container-ForCard {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.product-card {
+    transition: transform 0.4s ease;
+    width: calc(40% - 5rem);
+    /* عرض البطاقة مع مراعاة الفجوة بين البطاقات */
+    max-width: 300px;
+    /* الحد الأقصى لعرض البطاقة */
+    flex-grow: 1;
+    /* السماح للبطاقة بالنمو لملء الفراغ */
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: #000000;
+    border-radius: 17px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(255, 0, 0, 0.6);
+    padding: 2px;
+    text-align: center;
+    color: white;
+
+}
+
+
+.slideanim {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(90px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn2 {
+    from {
+
+        opacity: 0;
+    }
+
+    to {
+
+        opacity: 1;
+    }
+}
+
+.faqanim {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+.product-card img {
+    width: 100%;
+    /* زيادة حجم الصورة */
+    height: auto;
+    border-radius: 12px 12px 0 0px;
+    margin: 0 -25%;
+    /* توسيط الصورة وتحديد موقعها إلى اليسار أو اليمين */
+
+    margin-bottom: 15px;
+
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); */
+}
+#IDHover:hover{
+ box-shadow: 7px 6px 11px rgba(115, 8, 177, 0.6);
+}
+#CoinsHover:hover{
+    box-shadow: 7px 6px 11px rgba(192, 174, 7, 0.6);
+   }
+#MoneyHover:hover{
+    box-shadow: 7px 6px 11px rgba(27, 107, 6, 0.6);
+   }  
+ #PremiumHover:hover{
+    box-shadow: 7px 6px 11px rgba(2, 145, 126, 0.6);
+ }  
+ #PlusHover:hover{
+    box-shadow: 7px 6px 11px rgba(79, 126, 4, 0.719);
+ }  
+#ClassicHover:hover{
+    box-shadow: 7px 6px 11px rgba(0, 95, 75, 0.719);
+}
+.product-card h2 {
+    font-size: x-large;
+    color: #ffffff;
+    text-shadow: 0 0 8px #ffffff;
+    font-weight: bold;
+}
+
+.product-card p {
+    font-weight: bold;
+    color: #a09898;
+    margin-bottom: 15px;
+    text-shadow: 0 0 14px #a09898;
+}
+
+.product-card button {
+
+    background-color: #530c0c;
+    color: rgb(255, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+    font-weight: bold;
+}
+
+.product-card button:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 20px #ff0000, 0 0 0px #ff0000;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px) !important;
+    transition: transform 0.5s ease;
+
+}
+
+.modal-content {
+    font-weight: bold;
+    color: #b3b3b3;
+    text-shadow: #979797;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    margin: 10% auto;
+    padding: 10px;
+    box-shadow: 1px 2px 8px rgba(255, 0, 0, 0.6);
+    width: 40%;
+
+    border-radius: 13px;
+
+}
+
+.modal-content h2 {
+    color: red;
+    text-shadow: 0 0px 2px red;
+}
+
+.modal-content-pay {
+
+    font-weight: bold;
+    color: #b3b3b3;
+    text-shadow: #979797;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    margin: 10% auto;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.6);
+    width: 40%;
+    border-radius: 13px;
+
+}
+
+.modal-text {
+
+    padding-bottom: 10px;
+    text-align: right;
+    display: inline-block;
+}
+
+.pForCardInfo {
+    padding-right: 100px;
+    width: auto;
+
+}
+
+.modal-text-taq {
+    padding-bottom: 10px;
+    text-align: right;
+    display: inline-block;
+}
+
+.modal-content .close {
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* وضع الزر في أقصى اليمين */
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content-pay .close-id {
+    position: fixed;
+    display: flex;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-id:hover,
+.close-id:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content-pay .close-pay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-pay:hover,
+.close-pay:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* تكييف للأجهزة الصغيرة */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    * {
+      
+        font-size: small;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        display: flex;
+        transform: translateX(0%);
+    }
+
+    .product-card {
+
+        margin: 20px;
+        padding: 20px;
+        width: 130px;
+        display: inline-block;
+        height: auto;
+
+    }
+
+    .product-card h2 {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    /* .navbar{
+line-height: 1rem;
+top:0;
+left: 0;
+position: absolute;
+padding-top: 1px ;
+padding-bottom: 20px;
+width: 100%;
+text-align: center;
+font-size: smaller;
+    } */
+    .store-name a {
+        padding-right: 10px;
+    }
+
+    .store-name img {
+        padding-right: 2px;
+    }
+
+    .product-card img {
+        
+        padding: 1px;
+        width: 130%;
+        transform: translateY(-19%);
+        max-width: 400px;
+        height: auto;
+    }
+
+    .product-card button {
+        padding: 10px 15px;
+
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal-content {
+
+
+        overflow-y: auto;
+        /* إضافة تمرير عمودي */
+        width: 90% !important;
+        margin: 30% auto;
+        padding: 1px;
+        text-align: center;
+        height: auto;
+
+    }
+
+    .modal-content::-webkit-scrollbar {
+        width: 8px;
+        /* عرض شريط التمرير */
+
+    }
+
+    .modal-text {
+
+
+        font-size: 10px;
+
+
+    }
+
+    .pForCardInfo {
+        padding-left: 90px;
+       
+    }
+    .pForCardInfo p{
+        font-size: 9px;
+       
+    }
+
+    .close-id {
+
+
+        padding-right: 200px;
+    }
+
+    .close-pay {
+        display: inline-block;
+        padding-right: 10px;
+
+    }
+
+    .modal-content-pay {
+        width: 90%;
+        margin: 25% auto;
+        padding: 0rem;
+        height: auto;
+    }
+
+    .close-pay {
+        width: 100%;
+
+
+    }
+
+}
+
+.modal-text h2 {
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    text-shadow: 0 0 11px red;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    background-color: #631212;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 180px;
+}
+
+.submit:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 0 5px #ff0000,
+        0 0 5px #ff0000,
+        0 0 20px #ff0000,
+        0 0 0px #ff0000;
+}
+
+.a-shop {
+    color:rgb(255, 49, 49);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.a-shop:hover {
+    text-decoration: underline;
+    color: rgb(172, 19, 19);
+}
+
+.product-card-a {
+    text-decoration: none;
+}
+
+.navbar-foot {
+    display: contents;
+    backdrop-filter: blur(10px) !important;
+    background-color: rgba(0, 0, 0, 0.9);
+    bottom: 0;
+    /* تثبيت الناف بار في أسفل الصفحة */
+    width: 100%;
+
+
+    padding: 1px 0;
+    /* تباعد العناصر داخل الناف بار */
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.navbar-foot a {
+
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    /* تباعد بين الروابط */
+}
+
+.navbar-foot-faq {
+
+    display: contents;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px) !important;
+    padding: 1px 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.navbar-foot-faq a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+.socials {
+    animation: slideUp 0.7s ease-in-out;
+    position: relative;
+    text-align: center;
+
+
+}
+
+.Copyright {
+    padding: 10px;
+    text-shadow: 0 0 16px #b8b8b858;
+}
+
+.socials svg {
+    color: #b8b8b858;
+    text-shadow: 0 0 16px #ffffff58;
+    margin: 0 5px;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+.socials svg:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
+    
+}
+
+.a-shop-shop {
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.a-shop-shop:hover {
+    text-decoration: none;
+    color: rgb(172, 19, 19);
+}
+
+/*  */
+
+#faq-content {
+    max-width: 50%;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    margin-top: 120px;
+}
+
+#faq-content h2 {
+    text-shadow: 0 0 10px red;
+    font-size: 22px;
+    color:rgb(255, 49, 49);
+    text-align: center;
+    margin-bottom: 19px;
+    font-weight: bold;
+}
+
+#accordion {
+    list-style-type: none;
+    padding: 0;
+}
+
+#accordion li {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #000000;
+    border-radius: 11px;
+}
+
+#accordion li input[type="checkbox"] {
+    display: none;
+}
+
+#accordion li label {
+    display: block;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-radius: 11px 11px 0 0;
+}
+
+#accordion li label span {
+    float: right;
+    margin-top: 5px;
+
+}
+
+#accordion li .content {
+    display: none;
+    padding: 20px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease;
+}
+
+#accordion li input[type="checkbox"]:checked~.content {
+    display: block;
+    opacity: 1;
+    max-height: 1000px;
+    transition: max-height 0.7s ease, opacity 0.10s ease;
+
+}
+
+#accordion li label,
+#accordion li .content {
+    text-align: center;
+
+}
+
+li label {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-shadow: 0 0 4px rgb(255, 255, 255);
+
+}
+
+li p {
+    color:rgb(255, 49, 49);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgb(255, 0, 0);
+}
+
+#accordion li input[type="checkbox"]:checked+label span {
+    transform: rotate(90deg);
+    transition: transform 0.4s ease;
+}
+
+/*  */
+
+
+
+/* تعيين لون الخلفية لشريط التمرير */
+::-webkit-scrollbar {
+    width: 10px;
+    /* عرض شريط التمرير */
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: red;
+    /* لمتصفحات WebKit (مثل Chrome و Safari وأجزاء من Edge) */
+
+}
+
+/* تعيين لون الشريط نفسه */
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* id modal */
+.container {
+    display: flex;
+    gap: 17px;
+}
+.container-coins {
+    display: flex;
+    gap: 17px;
+}
+
+.box {
+    width: 100px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(228, 12, 12, 0.7);
+    color: rgb(217, 217, 217);
+    text-shadow: 0 0 10px rgb(217, 217, 217);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.box::after {
+    content: attr(data-price);
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+   
+    color: white;
+    padding: 2px 27px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+    pointer-events: none;
+}
+
+.box:hover {
+    background-color: #780707;
+    border: 2px solid rgb(255, 0, 0);
+    box-shadow: 0 0 10px red;
+}
+
+.box:hover::after {
+    bottom: 4px;
+    opacity: 1;
+}
+
+.price {
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    padding: 9px;
+    font-size: 23px;
+    text-shadow: 0 0 10px green;
+}
+
+.price1 {
+    text-shadow: 0 0 10px rgb(255, 0, 0);
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 8px;
+    font-size: larger;
+}
+
+#span-fa {
+    content: attr(data-title);
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+#span-fa:hover {
+    transform: scale(1.2);
+    color: red;
+}
+
+#span-fa::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(10px) !important;
+    background-color: rgba(255, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+    pointer-events: none;
+}
+
+#span-fa:hover::after {
+    font-family: 'Tajawal';
+    src: url("./fonts/Tajawal-Regular.ttf") format("truetype");
+    bottom: 40px;
+    opacity: 1;
+}
+
+/* btn id modal */
+
+.product-card-modal-id button {
+    transform: translateX(-115%);
+    background-color: #530c0c;
+    color: rgb(255, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+    font-weight: bold;
+}
+
+.product-card-modal-id button:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 20px #ff0000, 0 0 0px #ff0000;
+}
+
+/*  */
+.product-card-modal-coins button {
+    transform: translateX(-150%);
+    background-color: #530c0c;
+    color: rgb(255, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+    font-weight: bold;
+}
+
+.product-card-modal-coins button:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 20px #ff0000, 0 0 0px #ff0000;
+}
+
+@media (max-width: 600px) {
+    .box {
+        width: 50px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .container-coins .box{
+        width: 50px;
+        height: 30px;
+        font-size: 12px !important;
+    }
+
+    .box::after{
+       display: none;
+    }
+    
+    .price {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .price1 {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .product-card-modal-id button {
+
+        padding: 8px 16px;
+        transform: translateX(3%);
+        /* transform: translateY(-60%); */
+    }
+    .product-card-modal-coins button {
+        padding: 8px 16px;
+        transform: translateX(3%);
+    }
+    .carousel-control-next-icon{
+        
+        transform: translateY(200%) !important;
+    }
+    .carousel-control-prev-icon{
+        
+        transform: translateY(200%) !important;
+    }
+    .carousel {
+       
+        width: 97% !important; 
+        transform: translateX(2%) !important;
+    }
+    .div-res-info{
+    
+        transform: translateY(15px) !important;
+    }
+}
+
+.carousel {
+    animation: fadeIn2 1s ease forwards;
+    opacity: 0;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+    width: 75%;
+    transform: translateX(16%);
+    padding-top: 150px;
+
+}
+
+.carousel img {
+    border-radius: 23px;
+}
+@media screen and (max-width: 550px) {
+
+    .product-card img {
+        border-radius: 20px;
+        padding: 10px;
+        width: 120%;
+        transform: translateY(-15%);
+        max-width: 400px;
+        height: auto;
+    }
+    }

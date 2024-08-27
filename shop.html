@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    <link rel="icon" href="un.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >
+
+    <title>Uturn - Shop</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="un.jpg" alt="" width="45rem">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" style="color: red;"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link " aria-current="page" href="index.html">الرئيسية <i class="fa fa-home"></i>  </a>
+              <a class="nav-link" href="more.html">  FAQ <i class="fa fa-question-circle" aria-hidden="true"></i></a>
+              <a class="nav-link" href="LinkDiscord.html">  ربط ديسكورد <i class="fab fa-discord"></i></a>
+              <a class="nav-link active" aria-disabled="true" href="shop.html"> المتجر <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+ 
+
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" style="border-radius: 23px;">
+            <div class="carousel-item active">
+                <img src="SHOP.png" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+           
+        </div>
+      </div>
+
+    <div class="slideanim">
+        <!-- Premium MemberShip card -->
+        <div class="container-ForCard">
+            <div class="product-card" id="PremiumHover">
+                <div class="hovercard1">
+                <img src="Premium.png" alt="منتج">
+                <h2>Premium MemberShip</h2>
+                <p>عضويه خاصه داخل السيرفر لمدة 30 يوم</p>
+                <a class="a-shop" href="#" onclick="openModalFunction('modal1')">مميزات الشارة داخل السيرفر ؟</a>
+                <p style="color: rgb(0, 189, 0); text-shadow: green;">$100</p>
+                <button onclick="openModal()"><i class="fa fa-shopping-cart" aria-hidden="true"></i> شراء المنتج</button>
+            </div>
+        </div>
+    <!-- Plus MemberShip card -->
+            <div class="product-card" id="PlusHover">
+                <img src="PLUS.png" alt="منتج">
+                <h2>Plus MemberShip</h2>
+                <p>عضويه خاصه داخل السيرفر لمدة 30 يوم</p>
+                <a class="a-shop" href="#" onclick="openModalFunction('modal2')">مميزات الشارة داخل السيرفر ؟</a>
+                <p style="color: rgb(0, 189, 0); text-shadow: green;">$100</p>
+                <button onclick="openModal()"><i class="fa fa-shopping-cart" aria-hidden="true"></i> شراء المنتج</button>
+            </div>   
+    <!-- Classic MemberShip card -->
+            <div class="product-card" id="ClassicHover">
+                <img src="CLASSIC.png" alt="منتج">
+                <h2>Classic MemberShip</h2>
+                <p>عضويه خاصه داخل السيرفر لمدة 30 يوم </p>
+                <a class="a-shop" href="#" onclick="openModalFunction('modal3')">مميزات الشارة داخل السيرفر ؟</a>
+                <p style="color: rgb(0, 189, 0); text-shadow: green;">$100</p>
+                <button onclick="openModal()"><i class="fa fa-shopping-cart" aria-hidden="true"></i> شراء المنتج</button>
+            </div>
+    <!-- ID card -->
+            <div class="product-card" id="IDHover">
+                <a href="#" class="product-card-a" onclick="openModal2()">
+                    <img src="ID1.png" alt="منتج">
+                    <h2>Special ID</h2>
+                    <p><i class="fa fa-info-circle" aria-hidden="true" id="span-fa" data-title="معلومات"></i> ايدي مميز داخل السيرفر</p>
+                    <a class="a-shop" href="#" onclick="openModalFunction('modal4')">مميزات الايدي داخل السيرفر ؟</a>
+                    <p style="color: rgb(0, 189, 0); text-shadow: green;">$ -</p>
+                    <div style=" transform: translateY(-10px);" class="div-res-info">
+                    <button onclick="openModal()"><i class="fa fa-shopping-cart" aria-hidden="true"></i> شراء المنتج</button>
+                     </div>
+                </a>
+            </div>
+    <!-- Money card -->
+            <div class="product-card" id="MoneyHover">
+                <a href="#" class="product-card-a" onclick="openModal3()">
+                    <img src="Money.png" alt="منتج">
+                    <h2>Money</h2>
+                    <p><i class="fa fa-info-circle" aria-hidden="true" id="span-fa" data-title="معلومات"></i> شراء فلوس داخل السيرفر</p>
+                    <a class="a-shop" href="#" onclick="openModalFunction('modal5')">! ملاحظه</a>
+                    <p style="color: rgb(0, 189, 0); text-shadow: green;">$ -</p>
+                    <div style=" transform: translateY(-10px);" class="div-res-info">
+                    <button onclick="openModal()"><i class="fa fa-shopping-cart" aria-hidden="true"></i> شراء المنتج</button>
+                    </div>
+                </a>
+            </div>
+    <!-- coins card -->
+            <div class="product-card" id="CoinsHover">
+                <a href="#" class="product-card-a" onclick="openModal4()">
+                    <img src="COINS1.png" alt="منتج">
+                    <h2>Coins</h2>
+                    <p><i class="fa fa-info-circle" aria-hidden="true" id="span-fa" data-title="معلومات"></i> شراء كوينز داخل السيرفر</p>
+                    <a class="a-shop" href="#" onclick="openModalFunction('modal5')">! ملاحظه</a>
+                    <p style="color: rgb(0, 189, 0); text-shadow: green;">$ -</p>
+                    <div style=" transform: translateY(-15px);" class="div-res-info">
+                    <button onclick="openModal()"><i class="fa fa-shopping-cart" aria-hidden="true"></i> شراء المنتج</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- مودل شراء -->
+    <div id="myModal" class="modal">
+        <div class="modal-content-pay">
+            <div class="close-id">
+            <span class="close-id" onclick="closeModal()" style="right:31%;">&times;</span>
+        </div></br>
+            <div class="modal-text">
+            <h2 style="padding: 10px;"> لشراء هذا المنتج يرجى اتباع الاخطوات التاليه</h2>
+           <p>
+            1- يرجى فتح تذكرة داخل سيرفر الدعم الفني عبر الرابط التالي 
+           </br>  <a href="https://discord.gg/zrbZ5Q3S" class="a-shop-shop"><i class="fa fa-life-ring" aria-hidden="true"></i> الدعم الفني </a>
+        </br>    2- ثم التوجه لقسم المتجر و طلب شراء المنتج
+    </br>  3- سيتم التواصل معك ل تسليم المنتج
+</br>  ملاحظه : يرجى عدم ارفاق معلومات حساسه داخل التذكره الاداره غير مسؤولةعن ذالك
+</br>  <a href="more.html" class="a-shop-shop"> <i class="fa fa-question-circle" aria-hidden="true"></i> المزيد من التفاصيل</a>
+           </p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+    <!-- 1 مودل وصف -->
+    <div id="modal1" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalFunction('modal1')">&times;</span>
+            <div class="modal-text">
+            <h2 style="padding: 10px;">مميزات الشارة داخل السيرفر <i class="fa fa-star" aria-hidden="true"></i></h2>
+            <div class="pForCardInfo">
+            <p>شارة ولون مميز <i class="fa fa-check-circle" aria-hidden="true"></i>
+            </br> شارة بجانب الإسم في التاب <i class="fa fa-check-circle" aria-hidden="true"></i>
+        </br>     <span style="color: rgb(255, 0, 0); ">$ 500.000</span> مبلغ <i class="fa fa-check-circle" aria-hidden="true"></i>
+    </br>  خصم<span style="color: red;"> 35% </span> في جميع المعارض <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>    خصم<span style="color: red;"> 40% </span>على فواتير الكهرباء <i class="fa fa-check-circle" aria-hidden="true"></i>
+            </br>    خصم<span style="color: red;"> 40% </span> على تسديد المخالفات <i class="fa fa-check-circle" aria-hidden="true"></i>
+        </br>   زيادة في الراتب اليومي <i class="fa fa-check-circle" aria-hidden="true"></i>
+    </br>    زيادة<span style="color: red;"> 45% </span> في رواتب الوظائف <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>    زيادة<span style="color: red;"> 45% </span> في تحصيل الخبرة <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>    خصم<span style="color: red;"> 75% </span> على تصليح المركبات <i class="fa fa-check-circle" aria-hidden="true"></i>
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+     <!-- 2 مودل وصف -->
+    <div id="modal2" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalFunction('modal2')">&times;</span>
+            <div class="modal-text">
+            <h2 style="padding: 10px;">مميزات الشارة داخل السيرفر <i class="fa fa-star" aria-hidden="true"></i></h2>
+            <div class="pForCardInfo">
+            <p>
+              شارة ولون مميز <i class="fa fa-check-circle" aria-hidden="true"></i>
+        </br>   شارة بجانب الإسم في التاب <i class="fa fa-check-circle" aria-hidden="true"></i>
+            </br>   <span style="color: rgb(255, 0, 0); ">$ 200.000</span> مبلغ <i class="fa fa-check-circle" aria-hidden="true"></i>
+        </br>    رتبة في الدسكورد <i class="fa fa-check-circle" aria-hidden="true"></i>
+    </br>    خصم<span style="color: red;"> 15% </span> في جميع المعارض <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>   خصم<span style="color: red;"> 20% </span>  على فواتير الكهرباء <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>   خصم<span style="color: red;"> 20% </span>  على تسديد المخالفات <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>     زيادة في الراتب اليومي <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>      زيادة<span style="color: red;"> 30% </span>  في رواتب الوظائف <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>      زيادة<span style="color: red;"> 30% </span>  في تحصيل الخبرة <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>     خصم<span style="color: red;"> 35% </span>  على تصليح المركبات <i class="fa fa-check-circle" aria-hidden="true"></i>
+            </p>
+             </div>
+             </div>
+        </div>
+    </div>
+    <!-- 3 مودل وصف -->
+    <div id="modal3" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalFunction('modal3')">&times;</span>
+            <div class="modal-text">
+            <h2 style="padding: 10px;">مميزات الشارة داخل السيرفر <i class="fa fa-star" aria-hidden="true"></i></h2>
+           <div class="pForCardInfo">
+            <p>
+              شارة ولون مميز <i class="fa fa-check-circle" aria-hidden="true"></i>
+        </br>   شارة بجانب الإسم في التاب <i class="fa fa-check-circle" aria-hidden="true"></i>
+    </br>   <span style="color: rgb(255, 0, 0); ">$ 100.000</span> مبلغ <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>  رتبة في الدسكورد <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>  خصم <span style="color: red;"> 5% </span>  في جميع المعارض <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>  خصم<span style="color: red;"> 10% </span> على فواتير الكهرباء <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>  خصم<span style="color: red;"> 10% </span>  على تسديد المخالفات <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>  زيادة<span style="color: red;"> 15% </span> في رواتب الوظائف <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>  زيادة<span style="color: red;"> 15% </span>  في تحصيل الخبرة <i class="fa fa-check-circle" aria-hidden="true"></i>
+</br>  خصم<span style="color: red;"> 20% </span>  على تصليح المركبات <i class="fa fa-check-circle" aria-hidden="true"></i>
+            </p>
+        </div>
+            </div>
+        </div>
+    </div>
+   <!-- 4 مودل وصف -->
+    <div id="modal4" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalFunction('modal4')">&times;</span>
+            <h2 style="padding: 10px;">مميزات الايدي داخل السيرفر <i class="fa fa-address-card"></i></h2>
+            <p>
+               
+             مدة الآي دي ستكون لموسم واحد <span style="color: red;"> فقط </span> مع تخفيض<span style="color: red;"> 20% </span> في الموسم القادم
+
+            </br>عند شراؤك اي دي مميز داخل السيرفر ستستمع بالايدي لمدة موسم واحد فقط ولن تحصل على الايدي في مواسم اخرى وادارة السيرفر غير مسؤولة عن تعويضك بشيء اخر في حال التصفير 
+       </p>
+        </div>
+    </div>
+
+
+     <!-- 5 مودل وصف -->
+    <div id="modal5" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalFunction('modal5')">&times;</span>
+            <h2 style="padding: 10px;">  ملاحظه مهمه <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></h2>
+            <p>
+                قد يحدث تصفير في مواسم قادمة والإدارة غير مسؤولة عن تعويضك بمبالغ مادية قد تم شراؤها في مواسم اخرى
+       </p>
+        </div>
+    </div>
+
+
+<!-- ID Modal -->
+    <div id="myModal2" class="modal">
+        <div class="modal-content-pay">
+            <!-- <div class="close-pay"> -->
+            <span class="close-id" onclick="closeModal2()" style="right:33%;">&times;</span>
+        <!-- </div>  -->
+            <div class="modal-text">
+            <h2 style="padding: 10px;"> Select ID / اختيار الايدي</h2>
+            <div class="container">
+                <div class="box" onclick="showPrice(50, 150)">ID 50</div>
+                <div class="box" onclick="showPrice(110, 125)">ID 110</div>
+                <div class="box" onclick="showPrice(777, 100)">ID 777</div>
+                <div class="box" onclick="showPrice(888, 85)">ID 888</div>
+            </div>
+            <div id="IdDisplay" class="price1"></div>
+            <div id="priceDisplay" class="price"></div>
+                 <div class="product-card-modal-id">
+                <button onclick="switchModalForShop('myModal2', 'myModal')"><i class="fa fa-shopping-cart" aria-hidden="true"></i> شراء المنتج </button>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+ <!--  Modal (branch)-->
+ <div id="myModal" class="modal">
+    <div class="modal-content-pay">
+        <div class="close-id">
+            <span class="close-id" onclick="closeModalForShop('myModal')" style="right:31%;">&times;</span>
+        </div>
+        <br>
+        <div class="modal-text">
+            <h2 style="padding: 10px;">لشراء هذا المنتج يرجى اتباع الاخطوات التاليه</h2>
+            <p>
+                1- يرجى فتح تذكرة داخل سيرفر الدعم الفني عبر الرابط التالي
+                <br>
+                <a href="https://discord.gg/zrbZ5Q3S" class="a-shop-shop">
+                    <i class="fa fa-life-ring" aria-hidden="true"></i> الدعم الفني
+                </a>
+                <br>
+                2- ثم التوجه لقسم المتجر و طلب شراء المنتج
+                <br>
+                3- سيتم التواصل معك ل تسليم المنتج
+                <br>
+                ملاحظه : يرجى عدم ارفاق معلومات حساسه داخل التذكره الاداره غير مسؤولة عن ذالك
+                <br>
+                <a href="more.html" class="a-shop-shop">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i> المزيد من التفاصيل
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- money Modal -->
+<div id="myModal3" class="modal">
+    <div class="modal-content-pay">
+        <!-- <div class="close-pay"> -->
+        <span class="close-id" onclick="closeModal3()" style="right:33%;">&times;</span>
+    <!-- </div>  -->
+        <div class="modal-text">
+        <h2 style="padding: 10px;">اختار المبلغ للشراء</h2>
+        <div class="container">
+            <div class="box" onclick="showPriceMoney(1000, 15)">1K$</div>
+            <div class="box" onclick="showPriceMoney(2000, 105)">2K$</div>
+            <div class="box" onclick="showPriceMoney(1000000, 120)">1M$</div>
+            <div class="box" onclick="showPriceMoney(10000000, 185)">10M$</div>
+        </div>
+        <div id="MoneyPrice" class="price1"></div>
+        <div id="priceDisplayMoney" class="price"></div>
+             <div class="product-card-modal-id">
+                <button onclick="switchModalForShop('myModal3', 'myModal')"><i class="fa fa-shopping-cart" aria-hidden="true"></i> شراء المنتج </button>
+             </div>
+        </div>
+    </div>
+</div>
+
+<!-- coins Modal -->
+<div id="myModal4" class="modal">
+    <div class="modal-content-pay">
+        <!-- <div class="close-pay"> -->
+        <span class="close-id" onclick="closeModal4()" style="right:33%;">&times;</span>
+    <!-- </div>  -->
+        <div class="modal-text">
+        <h2 style="padding: 10px;">اختار المبلغ للشراء</h2>
+        <div class="container-coins">
+            <div class="box" onclick="showPriceCoins(50, 15)">50 C</div>
+            <div class="box" onclick="showPriceCoins(150, 105)">150 C</div>
+            <div class="box" onclick="showPriceCoins(350, 120)">350 C</div>
+            <div class="box" onclick="showPriceCoins(500, 185)">500 C</div>
+            <div class="box" onclick="showPriceCoins(1000, 185)">100 C</div>
+        </div>
+        <div id="CoinsPrice" class="price1"></div>
+        <div id="priceDisplayCoins" class="price"></div>
+             <div class="product-card-modal-coins">
+            <button onclick="switchModalForShop('myModal4', 'myModal')"><i class="fa fa-shopping-cart" aria-hidden="true"></i> شراء المنتج </button>
+             </div>
+        </div>
+    </div>
+</div>
+<!--  -->
+
+
+
+<!--  -->
+
+    <!-- nav footer -->
+    <footer class="navbar-foot">
+        <div class="socials">
+ 
+           
+            <a href="https://discord.gg/uturn" target="_blank" class="a_socials">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                    <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                  </svg>
+            </a>
+          
+            <a href="#" target="_blank" class="a_socials">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256"><path fill="currentColor" d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24Zm-26.37 144h52.74C149 186.34 140 202.87 128 215.89c-12-13.02-21-29.55-26.37-47.89ZM98 152a145.72 145.72 0 0 1 0-48h60a145.72 145.72 0 0 1 0 48Zm-58-24a87.61 87.61 0 0 1 3.33-24h38.46a161.79 161.79 0 0 0 0 48H43.33A87.61 87.61 0 0 1 40 128Zm114.37-40h-52.74C107 69.66 116 53.13 128 40.11c12 13.02 21 29.55 26.37 47.89Zm19.84 16h38.46a88.15 88.15 0 0 1 0 48h-38.46a161.79 161.79 0 0 0 0-48Zm32.16-16h-35.43a142.39 142.39 0 0 0-20.26-45a88.37 88.37 0 0 1 55.69 45ZM105.32 43a142.39 142.39 0 0 0-20.26 45H49.63a88.37 88.37 0 0 1 55.69-45ZM49.63 168h35.43a142.39 142.39 0 0 0 20.26 45a88.37 88.37 0 0 1-55.69-45Zm101.05 45a142.39 142.39 0 0 0 20.26-45h35.43a88.37 88.37 0 0 1-55.69 45Z"/></svg>
+            </a>
+            
+              <a href="https://youtube.com/@uturn-rp?si=jrj4fbRUxV1KMlSK" target="_blank" class="a_socials">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="M11.603 9.833L9.357 8.785C9.161 8.694 9 8.796 9 9.013v1.974c0 .217.161.319.357.228l2.245-1.048c.197-.092.197-.242.001-.334zM10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4zm0 13.5c-4.914 0-5-.443-5-3.9s.086-3.9 5-3.9s5 .443 5 3.9s-.086 3.9-5 3.9z"/></svg>
+          </a>
+          <p class="Copyright" style="color:#66666658 ;">© 2024 Copyright Uturn RP. Developed by 3tz </p>
+          </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="shop.js"></script>
+    
+</body>
+</html>
